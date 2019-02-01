@@ -1,0 +1,54 @@
+{
+    "name": "rubenpannen/test",
+    "description": "Test package",
+    "keywords": [
+        "rubenpannen",
+        "test"
+    ],
+    "homepage": "https://github.com/rubenpannen/test",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ruben Pannen",
+            "email": "Janpannen@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rubenpannen\\Test\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rubenpannen\\Test\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rubenpannen\\Test\\TestServiceProvider"
+            ],
+            "aliases": {
+                "Test": "Rubenpannen\\Test\\TestFacade"
+            }
+        }
+    }
+}
